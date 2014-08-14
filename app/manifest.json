@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+
+    "name": "Archive+",
+    "description": "Adds useful features to every Tumblr blog's archive page.",
+    "version": "0.3",
+    "icons": {
+        "16": "img/icon_16.png",
+        "32": "img/icon_32.png",
+        "48": "img/icon_48.png",
+        "64": "img/icon_64.png",
+        "128": "img/icon_128.png"
+    },
+    "permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/archive*",
+                "https://*/archive*"
+            ],
+            "css": [ "css/archive.min.css" ],
+            "run_at": "document_idle",
+            "js": [ "js/archive.min.js" ]
+        }
+    ]
+}
