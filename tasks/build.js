@@ -11,10 +11,7 @@ module.exports = function (grunt) {
 
 		var done = this.async();
 
-		var options = this.options({
-			package: 'package.json',
-			manifest: 'app/manifest.json'
-		});
+		var options = this.options();
 
 		if (!grunt.file.exists(options.manifest)) {
 			grunt.log.error('No manifest file exists at ' + chalk.cyan(path.resolve(options.manifest)));
