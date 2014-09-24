@@ -4,7 +4,7 @@ module.exports = {
 	},
 	resources: {
 		files: ['app/**/*'],
-		tasks: ['copy']
+		tasks: ['copy:debug']
 	},
 	js: {
 		files: ['app/scripts/**/*.js'],

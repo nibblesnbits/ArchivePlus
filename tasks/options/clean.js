@@ -1,5 +1,5 @@
 module.exports = {
-	all: {
+	build: {
 		// clear build folder
 		src: ['build']
 	},
