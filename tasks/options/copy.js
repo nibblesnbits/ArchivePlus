@@ -3,7 +3,7 @@ module.exports = {
 		files: [{
 			expand: true,
 			cwd: 'app',
-			src: ['manifest.json', 'img/**/*.*', 'scripts/*.min.js'],
+			src: ['manifest.json', 'img/**/*.*', 'libs/**/*.*'],
 			dest: 'build'
     }]
 	},
@@ -11,7 +11,7 @@ module.exports = {
 		files: [{
 			expand: true,
 			cwd: 'app',
-			src: ['manifest.json', 'img/**/*.*', 'scripts/**/*.js'],
+			src: ['manifest.json', 'img/**/*.*', 'libs/**/*.*'],
 			dest: 'build'
     }]
 	},
@@ -31,20 +31,12 @@ module.exports = {
 			dest: 'build/img'
     }]
 	},
-	libs: {
-		files: [{
-			expand: true,
-			cwd: 'app/scripts/libs',
-			src: ['*'],
-			dest: 'build/js/libs'
-	}]
-	},
 	js: {
 		files: [{
 			expand: true,
 			cwd: 'app/scripts/',
-			src: ['*.js', '!*.min.js'],
-			dest: 'build/js/'
+			src: ['*.js'],
+			dest: 'build/js'
     }]
 	}
 };

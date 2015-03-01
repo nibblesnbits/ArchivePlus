@@ -1,15 +1,15 @@
-(function () {
+(function() {
 	var posts = document.querySelectorAll('.posts .post'),
 		len = posts.length,
 		i = -1;
-	
+
 	if (len < 1) return;
 
 	while (++i < len) {
 		addLinks(posts[i].id);
 	}
 
-	document.querySelector('.l-content').addEventListener('DOMNodeInserted', function (e) {
+	document.querySelector('.l-content').addEventListener('DOMNodeInserted', function(e) {
 		if (/^post\s/.test(e.target.className)) {
 			addLinks(e.target.id);
 		}
@@ -28,7 +28,7 @@
 			href: "http://www.tumblr.com/reblog/" + postId + "/" + reblogId + "?redirect_to=%2Fdashboard",
 			target: "_blank"
 		});
-		reblogLink.addEventListener('onclick', function (e) {
+		reblogLink.addEventListener('onclick', function(e) {
 			e.target.className = e.target.className + "done";
 		});
 		controls.appendChild(reblogLink);
